@@ -1,5 +1,8 @@
 ```
-./mvnw clean package -DskipTests=true && cf push --vars-file=vars.yml && cf stop mysqlbackup
+cf create-service p-mysql 100mb jobs
+cf create-service scheduler-for-pcf standard scheduler
+
+./mvnw clean package -DskipTests=true && cf push --vars-file=vars.yml
 ```
 
 ```

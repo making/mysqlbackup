@@ -8,8 +8,8 @@ applications:
   path: target/mysqlbackup-0.0.1-SNAPSHOT.jar
   health-check-type: none
   services:
-  - jobs
-  - scheduler
+  - jobs # cf create-service p-mysql 100mb jobs
+  - scheduler # cf create-service scheduler-for-pcf standard scheduler
   env:
     BACKUP_TARGETS_CFP_HOSTNAME: ((backup.targets.cfp.hostname))
     BACKUP_TARGETS_CFP_PORT: ((backup.targets.cfp.port))
