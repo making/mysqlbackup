@@ -2,8 +2,8 @@ applications:
 - name: mysqlbackup
   instances: 0
   buildpacks:
-  - https://github.com/cloudfoundry/apt-buildpack#v0.1.6
-  - https://github.com/cloudfoundry/java-buildpack#v4.17.2
+  - https://github.com/cloudfoundry/apt-buildpack#v0.1.8
+  - https://github.com/cloudfoundry/java-buildpack#v4.20
   memory: 768m
   path: target/mysqlbackup-0.0.1-SNAPSHOT.jar
   health-check-type: none
