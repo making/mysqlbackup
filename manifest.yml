@@ -11,6 +11,7 @@ applications:
   - jobs # cf create-service p-mysql 100mb jobs
   - scheduler # cf create-service scheduler-for-pcf standard scheduler
   env:
+    MANAGEMENT_METRICS_EXPORT_PROMETHEUS_PUSHGATEWAY_BASE_URL: ((management.metrics.export.prometheus.pushgateway.base-url))
     BACKUP_TARGETS_CFP_HOSTNAME: ((backup.targets.cfp.hostname))
     BACKUP_TARGETS_CFP_PORT: ((backup.targets.cfp.port))
     BACKUP_TARGETS_CFP_USERNAME: ((backup.targets.cfp.username))

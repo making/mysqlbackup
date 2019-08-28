@@ -1,12 +1,10 @@
 package am.ik.batch.mysqlbackup;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
 
 import java.time.Duration;
 import java.util.Map;
 
-@Component
 @ConfigurationProperties(prefix = "backup")
 public class BackupProps {
 
